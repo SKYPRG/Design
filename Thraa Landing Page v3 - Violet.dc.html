@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<![CDATA[<helmet>
+<link rel="stylesheet" href="_ds/thraa-design-system-a0a280f7-d514-4000-a1e2-a13f0aa8ee72/styles.css">
+<script src="_ds/thraa-design-system-a0a280f7-d514-4000-a1e2-a13f0aa8ee72/_ds_bundle.js"></script>
+<style>
+:root{--thraa-primary:#2B1B45;--thraa-secondary:#6E6484;--thraa-surface:#FBFAFE;--thraa-surface-raised:#FFFFFF;--thraa-border:#ECE7F5;--thraa-tertiary:#7A3BC0;--thraa-tertiary-strong:#68309F;--thraa-text-on-amber:#FFFFFF}
+body{background:var(--thraa-page-bg)}
+#thraa-page{background:transparent!important}
+#thraa-glow{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:
+ radial-gradient(46% 40% at 88% 4%, rgba(124,58,190,.34), transparent 68%),
+ radial-gradient(40% 34% at 46% 12%, rgba(43,181,181,.26), transparent 70%),
+ radial-gradient(44% 38% at 4% 44%, rgba(232,146,54,.26), transparent 70%),
+ radial-gradient(40% 34% at 68% 66%, rgba(111,57,153,.18), transparent 72%)}
+html[data-thraa-theme="dark"] body{background:#171233}
+#thraa-page > div:not(#thraa-glow){position:relative;z-index:1}
+html[data-thraa-theme="dark"] #thraa-glow{background:
+ radial-gradient(46% 40% at 88% 4%, rgba(150,74,224,.55), transparent 66%),
+ radial-gradient(42% 36% at 46% 10%, rgba(38,196,196,.34), transparent 68%),
+ radial-gradient(46% 40% at 2% 42%, rgba(226,132,44,.34), transparent 68%),
+ radial-gradient(44% 38% at 70% 68%, rgba(120,62,190,.34), transparent 70%)}
+#majors a,#projects a{border-color:transparent!important;background:var(--thraa-surface-raised)!important;box-shadow:0 6px 22px rgba(43,27,69,.07)!important}
+html[data-thraa-theme="dark"] #majors a,html[data-thraa-theme="dark"] #projects a{box-shadow:none!important;border-color:var(--thraa-border)!important}
+#projects span[aria-hidden="true"],#majors span[aria-hidden="true"]{width:56px!important;height:28px!important;border-radius:56px 56px 0 0!important}
+#majors a{border-radius:32px!important}
+#projects a{border-radius:24px!important}
+@media (max-width:768px){#projects > div{grid-template-columns:1fr!important}}
+header img{border-radius:0}
+header button,section a[href="#majors"]{transition:transform 120ms ease-out,background-color 120ms ease-out,color 120ms ease-out!important}
+header button:hover,section a[href="#majors"]:hover{transform:scale(1.04)}
+header button:active,section a[href="#majors"]:active{transform:scale(.98)}
+#majors a,#projects a{transition:transform 120ms ease-out,border-color 120ms ease-out!important}
+#majors a:hover,#projects a:hover{transform:scale(1.02)}
+#majors a:active,#projects a:active{transform:scale(.99)}
+@media (prefers-reduced-motion: reduce){header button:hover,section a[href="#majors"]:hover,header button:active,section a[href="#majors"]:active,#majors a:hover,#projects a:hover,#majors a:active,#projects a:active{transform:none}}
+body{margin:0;background:var(--thraa-page-bg)}
+a{color:var(--thraa-primary)}a:hover{color:var(--thraa-secondary)}
+.thraa-rise{opacity:0;transform:translateY(28px);transition:opacity 420ms ease-out,transform 420ms cubic-bezier(.16,.84,.44,1)}
+.thraa-rise.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.thraa-rise{opacity:1;transform:none;transition:none}}
+html[data-thraa-theme="dark"]{
+  --thraa-page-bg:#171233;
+  --thraa-surface:#171233;
+  --thraa-surface-raised:color-mix(in oklab, #2B1B45 90%, #FBF9F5);
+  --thraa-surface-card:color-mix(in oklab, #2B1B45 90%, #FBF9F5);
+  --thraa-surface-inverse:#EDE9F5;
+  --thraa-text-on-ink:#241640;
+  --thraa-text-body:#E7E1D5;
+  --thraa-text-heading:#E7E1D5;
+  --thraa-text-muted:color-mix(in oklab, #E7E1D5 58%, #2B1B45);
+  --thraa-primary:#E7E1D5;
+  --thraa-secondary:color-mix(in oklab, #E7E1D5 58%, #2B1B45);
+  --thraa-border:color-mix(in oklab, #2B1B45 76%, #FBF9F5);
+  --thraa-focus-ring:#FEB400;
+}
+html[data-thraa-theme="dark"] body{background:#2B1B45}
+</style>
+</helmet>
+
+<div id="thraa-page" dir="rtl" style="background:var(--thraa-page-bg);color:var(--thraa-text-body);font-family:var(--thraa-font-text);min-height:100%;position:relative">
+<div id="thraa-glow" aria-hidden="true"></div>
+<div style="max-width:1120px;margin:0 auto;padding:0 var(--thraa-margin)">
+
+<header data-screen-label="Header" style="display:flex;align-items:center;gap:var(--thraa-space-xl);padding:var(--thraa-gutter) 0;border-bottom:1px solid var(--thraa-border)">
+  <img src="assets/thraa-mark.png" alt="ثراء" style="height:34px;width:auto;display:block">
+  <nav style="display:flex;gap:var(--thraa-space-lg);align-items:center">
+    <a href="#majors" style="font-size:var(--thraa-size-label-md);font-weight:var(--thraa-weight-semibold);letter-spacing:0;text-decoration:none">التخصصات</a>
+    <a href="#projects" style="font-size:var(--thraa-size-label-md);font-weight:var(--thraa-weight-semibold);letter-spacing:0;text-decoration:none">مشاريعنا</a>
+    <a href="#contact" style="font-size:var(--thraa-size-label-md);font-weight:var(--thraa-weight-semibold);letter-spacing:0;text-decoration:none">تواصل معنا</a>
+  </nav>
+  <div style="margin-inline-start:auto;display:flex">
+    <x-import component-from-global-scope="ThraaDesignSystem_a0a280.Button" variant="quiet" on-click="{{ toggleTheme }}" dc-props="{{ toggleProps }}" aria-label="{{ themeLabel }}" title="{{ themeLabel }}" hint-size="42px,42px">
+      <sc-if value="{{ isDark }}" hint-placeholder-val="{{ false }}">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+      </sc-if>
+      <sc-if value="{{ isLight }}" hint-placeholder-val="{{ true }}">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6.36 6.36 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+      </sc-if>
+    </x-import>
+  </div>
+</header>
+
+<section data-screen-label="Hero" style="padding:160px 0 0">
+  <div style="font-family:var(--thraa-font-mono);font-size:var(--thraa-size-label-sm);color:var(--thraa-text-muted);letter-spacing:0;margin-bottom:var(--thraa-space-md)">#مجتمع_جاهز_لكل_مرحلة</div>
+  <h1 style="font-family:var(--thraa-font-display);font-weight:var(--thraa-weight-extrabold);font-size:var(--thraa-size-display);line-height:var(--thraa-leading-display);letter-spacing:var(--thraa-tracking-display);color:var(--thraa-primary);margin:0;max-width:14ch">أهلاً بك في مبادرة ثراء</h1>
+  <p style="font-size:var(--thraa-size-body-lg);line-height:var(--thraa-leading-body-lg);color:var(--thraa-primary);max-width:var(--thraa-measure);margin:var(--thraa-space-lg) 0 0">مبادرة أُنشئت في جامعة الملك سعود لزيادة المعرفة بالتخصصات الأكاديمية، ودعم الطلاب في تحديد مستقبلهم الأكاديمي.</p>
+  <div style="margin-top:var(--thraa-space-lg);display:flex">
+    <x-import component-from-global-scope="ThraaDesignSystem_a0a280.Button" variant="action" href="#majors" dc-props="{{ btnProps }}" hint-size="auto,60px">تعرّف على المبادرة</x-import>
+  </div>
+</section>
+
+<div style="height:var(--thraa-space-xxl)"></div>
+
+<x-import component-from-global-scope="ThraaDesignSystem_a0a280.MissionBand" dc-props="{{ bandProps }}" hint-size="100%,240px" data-screen-label="Mission">
+  <p style="margin:0;max-width:var(--thraa-measure);font-size:var(--thraa-size-body-lg);line-height:var(--thraa-leading-body-lg)">شعارنا في هذه المبادرة أن نكون ذراعاً لدعم الطالب في اكتشاف العديد من المسارات والمجالات الأكاديمية.</p>
+</x-import>
+
+<div style="height:var(--thraa-space-xxl)"></div>
+
+<div id="majors" class="thraa-rise" data-rise-index="0" data-screen-label="Featured">
+  <x-import component-from-global-scope="ThraaDesignSystem_a0a280.FeaturedCard" title="تعريف التخصصات" description="تصفّح الكليات والتخصصات المتاحة في الجامعة. الأسر تجميع تصفّحي وليست وحدات رسمية في الجامعة." href="#majors" hint-size="100%,240px"></x-import>
+</div>
+
+<div style="height:var(--thraa-space-xl)"></div>
+
+<section id="projects" data-screen-label="Projects" style="display:flex;flex-direction:column;gap:var(--thraa-gutter)">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--thraa-gutter)">
+    <div class="thraa-rise" data-rise-index="1">
+      <x-import component-from-global-scope="ThraaDesignSystem_a0a280.ProjectCard" name="مستقبلي" description="مسارات ما بعد التخرج والفرص المتاحة لكل تخصص." petal-index="{{ p0 }}" href="#" hint-size="100%,180px"></x-import>
+    </div>
+    <div class="thraa-rise" data-rise-index="2">
+      <x-import component-from-global-scope="ThraaDesignSystem_a0a280.ProjectCard" name="متجه" description="اتجاهات سوق العمل ومخرجات الكليات." petal-index="{{ p1 }}" href="#" hint-size="100%,180px"></x-import>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--thraa-gutter)">
+    <div class="thraa-rise" data-rise-index="3">
+      <x-import component-from-global-scope="ThraaDesignSystem_a0a280.ProjectCard" name="أثر" description="قصص خريجين وأثرهم في مجالاتهم." petal-index="{{ p2 }}" href="#" hint-size="100%,180px"></x-import>
+    </div>
+    <div class="thraa-rise" data-rise-index="4">
+      <x-import component-from-global-scope="ThraaDesignSystem_a0a280.ProjectCard" name="بُعد" description="التخصصات عن بُعد والبرامج المرنة." petal-index="{{ p3 }}" href="#" hint-size="100%,180px"></x-import>
+    </div>
+    <div class="thraa-rise" data-rise-index="5">
+      <x-import component-from-global-scope="ThraaDesignSystem_a0a280.ProjectCard" name="موجز" description="ملخّصات قصيرة عن كل تخصص أكاديمي." petal-index="{{ p4 }}" href="#" hint-size="100%,180px"></x-import>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" data-screen-label="Footer" style="margin-top:var(--thraa-space-xxl);border-top:1px solid var(--thraa-border);padding:var(--thraa-space-xl) 0;display:grid;grid-template-columns:minmax(0,320px) minmax(0,240px);gap:var(--thraa-space-xl);justify-content:start;color:var(--thraa-text-muted);font-size:var(--thraa-size-body-sm);line-height:var(--thraa-leading-body-sm)">
+  <div style="display:flex;flex-direction:column;gap:var(--thraa-space-sm)">
+    <div style="font-size:var(--thraa-size-label-sm);font-weight:var(--thraa-weight-semibold);color:var(--thraa-primary);letter-spacing:0">ثراء</div>
+    <p style="margin:0">مبادرة من نادي الهندسة الصناعية بجامعة الملك سعود للتعريف بالتخصصات الأكاديمية.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:var(--thraa-space-sm)">
+    <div style="font-size:var(--thraa-size-label-sm);font-weight:var(--thraa-weight-semibold);color:var(--thraa-primary);letter-spacing:0">تواصل معنا</div>
+    <a href="mailto:thraa@ksu.edu.sa" style="text-decoration:none;color:var(--thraa-text-muted)">thraa@ksu.edu.sa</a>
+    <a href="#" style="text-decoration:none;color:var(--thraa-text-muted)">حساب المبادرة</a>
+    <div style="font-family:var(--thraa-font-mono);font-feature-settings:'tnum' 1">آخر تحديث: 1447/02/14</div>
+  </div>
+</footer>
+
+</div>
+</div>
+
+<template id="__bundler_thumbnail"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="#171233"/><circle cx="66" cy="34" r="16" fill="#7A3BC0"/><circle cx="36" cy="52" r="12" fill="#2BB5B5"/><rect x="30" y="72" width="40" height="6" rx="3" fill="#EDE9F5"/></svg></template></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { dark: false };
+  componentDidMount() {
+    let saved = null;
+    try { saved = localStorage.getItem('thraa-theme'); } catch (e) {}
+    const dark = saved === 'dark';
+    this.setState({ dark });
+    document.documentElement.dataset.thraaTheme = dark ? 'dark' : 'light';
+    this.observe();
+  }
+  toggleTheme = () => {
+    this.setState(s => {
+      const dark = !s.dark;
+      document.documentElement.dataset.thraaTheme = dark ? 'dark' : 'light';
+      try { localStorage.setItem('thraa-theme', dark ? 'dark' : 'light'); } catch (e) {}
+      return { dark };
+    });
+  };
+  componentDidUpdate() { this.observe(); }
+  observe() {
+    const nodes = Array.from(document.querySelectorAll('.thraa-rise:not(.is-in)'));
+    if (!nodes.length) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      nodes.forEach(n => n.classList.add('is-in'));
+      return;
+    }
+    if (this._io) this._io.disconnect();
+    clearTimeout(this._safety);
+    this._sweep = () => {
+      document.querySelectorAll('.thraa-rise:not(.is-in)').forEach(n => {
+        const r = n.getBoundingClientRect();
+        if (r.bottom <= 0 || (r.top < window.innerHeight && r.bottom > 0)) n.classList.add('is-in');
+      });
+    };
+    this._safety = setTimeout(this._sweep, 600);
+    requestAnimationFrame(() => { if (this._sweep) this._sweep(); });
+    if (!this._scrollBound) {
+      this._onScroll = () => { if (this._sweep) this._sweep(); };
+      window.addEventListener('scroll', this._onScroll, { passive: true });
+      window.addEventListener('resize', this._onScroll, { passive: true });
+      window.addEventListener('hashchange', this._onScroll);
+      this._tick = setInterval(this._onScroll, 500);
+      this._scrollBound = true;
+    }
+    this._io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        const r = e.target.getBoundingClientRect();
+        if (!e.isIntersecting && r.bottom > 0) return;
+        e.target.style.transitionDelay = `${(Number(e.target.dataset.riseIndex) || 0) * 90}ms`;
+        e.target.classList.add('is-in');
+        obs.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.15 });
+    nodes.forEach(n => this._io.observe(n));
+  }
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    clearTimeout(this._safety);
+    clearInterval(this._tick);
+    if (this._onScroll) {
+      window.removeEventListener('scroll', this._onScroll);
+      window.removeEventListener('resize', this._onScroll);
+      window.removeEventListener('hashchange', this._onScroll);
+    }
+  }
+  renderVals() {
+    return {
+      p0: 0, p1: 1, p2: 2, p3: 3, p4: 4,
+      toggleTheme: this.toggleTheme,
+      bandProps: { style: { borderRadius: 48, padding: '72px 64px', maxWidth: 840, marginInline: 'auto' } },
+      themeLabel: this.state.dark ? 'الوضع الفاتح' : 'الوضع الداكن',
+      isDark: this.state.dark,
+      isLight: !this.state.dark,
+      toggleProps: { style: { padding: 0, width: 42, height: 42, borderRadius: 12, justifyContent: 'center' } },
+      btnProps: { style: { fontSize: 'var(--thraa-size-body-md)', padding: '20px 36px', borderRadius: 999 } }
+    };
+  }
+}
+</script>
+</body>
+</html>
